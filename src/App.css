@@ -1,38 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+    max-width: 500px;
+    margin: 10px auto;
+    border: 1px solid #000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+    min-height: 50px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav.dark {
+    background-color: #000;
+    color: #fff;
+    border-bottom: 1px solid #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+nav.dark .toggle-slider{
+    justify-content: flex-end;
+    border: 1px solid #fff;
+    background-color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+nav.dark .toggle-slider-circle {
+    background-color: #000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.toggle-mode {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.toggle-slider {
+    width: 23px;
+    height: 12px;
+    background-color: #000;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    margin: 0 4px;
+    border: 1px solid #000;
+    box-sizing: content-box;
+}
+
+.toggle-slider-circle {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+}
+
+main {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main.dark{
+    background-color: #000;
+    color: #fff;
 }
